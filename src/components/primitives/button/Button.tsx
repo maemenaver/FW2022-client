@@ -54,7 +54,7 @@ function Button(props: ButtonProps) {
                 <ButtonNativeBase
                     paddingLeft={0}
                     paddingRight={`${PixelRatio.getPixelSizeForLayoutSize(
-                        24 + 8
+                        18 + 24 + 8
                     )}px`}
                     height={`${PixelRatio.getPixelSizeForLayoutSize(40)}px`}
                     _stack={{ flex: 1, space: 6 }}
