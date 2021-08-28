@@ -15,7 +15,7 @@ storiesOf("Text", module)
             <>
                 <NativeBaseProvider>
                     <Center flex={1}>
-                        <Text>
+                        <Text type="H3">
                             {text("Text", "서비스 약관에 동의해주세요.")}
                         </Text>
                     </Center>
@@ -28,7 +28,7 @@ storiesOf("Text", module)
             <>
                 <NativeBaseProvider>
                     <Center flex={1}>
-                        <Text underline>
+                        <Text type="Caption" underline>
                             {text("Text", "아이디나 비밀번호를 잊으셨나요?")}
                         </Text>
                     </Center>
@@ -41,14 +41,18 @@ storiesOf("Text", module)
             <>
                 <NativeBaseProvider>
                     <Center flex={1}>
-                        <Text>
+                        <Text type="Caption">
                             간편로그인시{" "}
                             <Link>
-                                <Text underline>서비스이용약관</Text>
+                                <Text type="Caption" underline>
+                                    서비스이용약관
+                                </Text>
                             </Link>
                             과{" "}
                             <Link>
-                                <Text underline>개인정보보호정책</Text>
+                                <Text type="Caption" underline>
+                                    개인정보보호정책
+                                </Text>
                             </Link>
                             에 동의하게 됩니다.
                         </Text>

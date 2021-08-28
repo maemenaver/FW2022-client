@@ -1,13 +1,6 @@
 import React, { forwardRef, memo, useEffect, useRef } from "react";
 import { Text as TextNativeBase } from "native-base";
-import { ITextProps } from "native-base/lib/typescript/components/primitives";
-
-export interface TextProps extends ITextProps {
-    /**
-     * @default "under"
-     */
-    textUnderlinePosition?: string;
-}
+import { TextProps } from "./Text.type";
 
 function Text(props: TextProps, ref: any) {
     const refText = useRef(ref);
