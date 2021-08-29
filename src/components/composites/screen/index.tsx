@@ -8,7 +8,7 @@ import NavigationBar from "../NavigationBar/NavigationBar";
 import Color from "../../Color";
 
 import { StatusBar } from "../../../basic/StatusBar";
-import { Dimensions, SafeAreaView } from "react-native";
+import { Dimensions, Platform, SafeAreaView } from "react-native";
 
 export function Screen({
     horizontalPadding = true,
@@ -43,7 +43,9 @@ export function Screen({
                 style={{
                     flex: 1,
                     paddingHorizontal: horizontalPadding
-                        ? Dimensions.get("screen").width * 0.05
+                        ? Platform.OS === "web"
+                            ? Dimensions.get("window").width * 0.05
+                            : Dimensions.get("screen").width * 0.05
                         : 0,
                 }}
             >
