@@ -1,8 +1,8 @@
 enum Color {
-    BackgroundPrimary = "#FFFFFF",
-    BackgroundGradientStart = "#FFFFFF",
-    BackgroundGradientMid = "#FFFFFF",
-    BackgroundGradientEnd = "#FFFFFF",
+    BackgroundPrimary = "#EEEEEE",
+    BackgroundGradientStart = "#AAAAAA",
+    BackgroundGradientMid = "#BBBBBB",
+    BackgroundGradientEnd = "#CCCCCC",
     TextPrimary = "#000000",
 }
 

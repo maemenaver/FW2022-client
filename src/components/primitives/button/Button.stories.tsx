@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native";
 import { Center } from "native-base";
 import { number, radios, text } from "@storybook/addon-knobs";
 
-import { NativeBaseProvider } from "../../NativeBaseProvider";
+import { Provider } from "../../Provider";
 import { PixelRatio } from "react-native";
 import Button, { ButtonProps } from "./Button";
 
@@ -20,18 +20,18 @@ storiesOf("Button", module)
     .add("Default Button", () => {
         return (
             <>
-                <NativeBaseProvider>
+                <Provider>
                     <Center flex={1}>
                         <Button>{text("text", "Button")}</Button>
                     </Center>
-                </NativeBaseProvider>
+                </Provider>
             </>
         );
     })
     .add("Outline Button", () => {
         return (
             <>
-                <NativeBaseProvider>
+                <Provider>
                     <Center flex={1}>
                         <Button
                             variant="outline"
@@ -40,14 +40,14 @@ storiesOf("Button", module)
                             {text("text", "이메일로 로그인 / 시작하기")}
                         </Button>
                     </Center>
-                </NativeBaseProvider>
+                </Provider>
             </>
         );
     })
     .add("Google Login Button", () => {
         return (
             <>
-                <NativeBaseProvider>
+                <Provider>
                     <Center flex={1}>
                         <Button
                             google={
@@ -62,7 +62,7 @@ storiesOf("Button", module)
                             {text("text", "Google로 시작하기")}
                         </Button>
                     </Center>
-                </NativeBaseProvider>
+                </Provider>
             </>
         );
     });

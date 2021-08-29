@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native";
 import { Center } from "native-base";
 import DividerText from "./DividerText";
 
-import { NativeBaseProvider } from "../../NativeBaseProvider";
+import { Provider } from "../../Provider";
 import { PixelRatio } from "react-native";
 import { number, text } from "@storybook/addon-knobs";
 import Text from "../../primitives/text/Text";
@@ -14,7 +14,7 @@ console.log(PixelRatio.getPixelSizeForLayoutSize(18));
 storiesOf("Divider", module).add("Divider Text", () => {
     return (
         <>
-            <NativeBaseProvider>
+            <Provider>
                 <Center flex={1}>
                     <Button google={"blue"}>
                         {text("button Text", "Google로 시작하기")}
@@ -28,7 +28,7 @@ storiesOf("Divider", module).add("Divider Text", () => {
                         {text("bottom Text", "서비스 약관에 동의해주세요.")}
                     </Text>
                 </Center>
-            </NativeBaseProvider>
+            </Provider>
         </>
     );
 });

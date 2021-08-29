@@ -4,7 +4,7 @@ import { Center } from "native-base";
 
 import { PixelRatio } from "react-native";
 import { number, text } from "@storybook/addon-knobs";
-import { NativeBaseProvider } from "../../components/NativeBaseProvider";
+import { Provider } from "../../components/Provider";
 import Button from "../../components/primitives/button/Button";
 import DividerText from "../../components/composites/divider/DividerText";
 import Text from "../../components/primitives/text/Text";
@@ -17,18 +17,18 @@ storiesOf("Auth Screen", module)
     .add("Main", () => {
         return (
             <>
-                <NativeBaseProvider>
+                <Provider>
                     <AuthMain />
-                </NativeBaseProvider>
+                </Provider>
             </>
         );
     })
     .add("Email Login", () => {
         return (
             <>
-                <NativeBaseProvider>
+                <Provider>
                     <AuthEmail />
-                </NativeBaseProvider>
+                </Provider>
             </>
         );
     });
