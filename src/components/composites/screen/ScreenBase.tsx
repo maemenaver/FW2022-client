@@ -12,7 +12,10 @@ export default function ScreenBase({
 }: ScreenBaseProp) {
     const styles = StyleSheet.create({
         container: {
-            width: Dimensions.get("screen").width,
+            width:
+                Platform.OS === "web"
+                    ? Dimensions.get("window").width
+                    : Dimensions.get("screen").width,
             height: Dimensions.get("screen").height,
             paddingTop: Platform.OS === "android" ? getStatusBarHeight() : 0,
             paddingBottom: Platform.OS === "android" ? 48 : 0,
