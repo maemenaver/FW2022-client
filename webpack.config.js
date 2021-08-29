@@ -10,5 +10,6 @@ module.exports = async function (env, argv) {
         },
         argv
     );
+    config.resolve.alias["react-native-linear-gradient"] = 'react-native-web-linear-gradient'
     return config;
 };
